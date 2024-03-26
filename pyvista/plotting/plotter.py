@@ -1797,6 +1797,7 @@ class BasePlotter(PickingHelper, WidgetHelper):
             return self.last_image
 
         self._check_rendered()
+        self._make_render_window_current()
         self._check_has_ren_win()
 
         data = image_from_window(self.render_window, scale=self.image_scale)
